@@ -1,15 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false,
   content: [
-    " . /pages/**/*.{js, ts, jsx, tsx}",
-    ". /components/**/*.{js, ts, jsx, tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         primary: "#232C63",
+        primaryDark: "#151A3C",
+        primaryLight: "#354297",
         secondary: "#C82030",
         tertiary: "#FEC70A",
       },
