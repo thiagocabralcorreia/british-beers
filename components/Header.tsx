@@ -20,7 +20,7 @@ const Header = ({ childrenLeft, childrenRight, dropdownMenu }: HeaderProps) => {
     >
       <nav
         className="max-md:flex max-md:justify-between grid grid-cols-3 max-md:gap-2 gap-4 items-center
-        w-full mx-auto px-10 max-sm:px-5 h-24 bg-primaryDark text-white"
+        w-full mx-auto px-10 max-sm:px-5 h-24 z-50 bg-primaryDark text-white relative"
       >
         <div className="flex items-center justify-self-start">
           <div className="flex items-baseline space-x-4 font-oswald">

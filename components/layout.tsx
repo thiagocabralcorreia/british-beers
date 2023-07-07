@@ -6,6 +6,7 @@ import Header from "./Header";
 
 import { ILink, links } from "../data/links";
 import DropdownMenuButton from "./DropdownMenuButton";
+import DropdownMenu from "./DropdownMenu";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={id}
                   href={href}
-                  className="max-lg:hidden header-link block px-3 py-4 transition ease-out duration-900 hover:text-tertiary"
+                  className="max-lg:hidden header-link block px-3 py-4 transition ease-out duration-900 text-lg
+                  hover:text-tertiary"
                 >
                   {name?.toUpperCase()}
                 </Link>
@@ -72,7 +74,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
           </>
         }
-        dropdownMenu={<div className="flex font-oswald text-lg"></div>}
+        dropdownMenu={
+          <DropdownMenu show={isOpen} onClose={() => setIsOpen(false)} />
+        }
       />
       <div>{children}</div>
     </div>
