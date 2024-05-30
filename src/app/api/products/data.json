@@ -12,13 +12,13 @@
     },
     {
       "id": 2,
-      "title": "Black Cab",
-      "slug": "black-cab",
+      "title": "ESB",
+      "slug": "esb",
       "price": 16,
-      "image": "/black-cab.png",
-      "description": "Black Cab pours a near jet-black colour with hints of coffee, chocolate and roasted malts on the nose.",
+      "image": "/esb.png",
+      "description": "he hops impart grassy, peppery notes alongside hints of citrus fruit – while the Pale Ale and Crystal malts bring distinctive biscuity flavours.",
       "featured": true,
-      "type": "stout"
+      "type": "ale"
     },
     {
       "id": 3,
@@ -99,6 +99,16 @@
       "description": "The blend of Brown, Crystal and Chocolate malts provide earthy character and creamy delivery, while hints of coffee and chocolate carry through onto the tongue.",
       "featured": false,
       "type": "porter"
+    },
+    {
+      "id": 11,
+      "title": "Black Cab",
+      "slug": "black-cab",
+      "price": 16,
+      "image": "/black-cab.png",
+      "description": "Black Cab pours a near jet-black colour with hints of coffee, chocolate and roasted malts on the nose.",
+      "featured": false,
+      "type": "stout"
     }
   ]
 }

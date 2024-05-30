@@ -1,16 +1,27 @@
+import { api } from "@/data/api";
+import { Product } from "@/data/types/product";
 import Image from "next/image";
 import Link from "next/link";
 
+async function getFeaturedProducts(): Promise<Product[]> {
+  const response = await api("/products/featured");
+  const products = await response.json();
+
+  return products;
+}
+
 export default async function Home() {
+  const [highlightedProduct, ...otherProducts] = await getFeaturedProducts();
+
   return (
     <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6">
       <Link
-        href="/"
+        href={`/product/${highlightedProduct.slug}`}
         className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end"
       >
         <Image
-          src="/london-pride.png"
-          alt="London Pride beer bottle"
+          src={highlightedProduct.image}
+          alt=""
           className="group-hover:scale-105 transition-transform duration-500"
           width={920}
           height={920}
@@ -18,54 +29,50 @@ export default async function Home() {
         />
 
         <div className="absolute bottom-28 right-28 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-600 bg-black/60 p-1 pl-5">
-          <span className="text-sm truncate">London Pride</span>
+          <span className="text-sm truncate">{highlightedProduct.title}</span>
           <span className="flex h-full items-center justify-center rounded-sn bg-red-800 px-4 font-semibold">
-            £14.50
+            {highlightedProduct.price.toLocaleString("en-GB", {
+              style: "currency",
+              currency: "GBP",
+              minimumFractionDigits: 0,
+              maximumFractionDigits: 0,
+            })}
           </span>
         </div>
       </Link>
 
-      <Link
-        href="/"
-        className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end"
-      >
-        <Image
-          src="/london-porter.png"
-          alt="London Porter beer bottle"
-          className="group-hover:scale-105 transition-transform duration-500"
-          width={920}
-          height={920}
-          quality={100}
-        />
+      {otherProducts.map((product) => {
+        return (
+          <>
+            <Link
+              key={product.id}
+              href={`/product/${product.slug}`}
+              className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end"
+            >
+              <Image
+                src={product.image}
+                className="group-hover:scale-105 transition-transform duration-500"
+                width={400}
+                height={400}
+                quality={100}
+                alt=""
+              />
 
-        <div className="absolute bottom-10 right-10 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-600 bg-black/60 p-1 pl-5">
-          <span className="text-sm truncate">London Porter</span>
-          <span className="flex h-full items-center justify-center rounded-sn bg-red-800 px-4 font-semibold">
-            £16.00
-          </span>
-        </div>
-      </Link>
-
-      <Link
-        href="/"
-        className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end"
-      >
-        <Image
-          src="/honey-drew.png"
-          className="group-hover:scale-105 transition-transform duration-500"
-          width={920}
-          height={920}
-          quality={100}
-          alt=""
-        />
-
-        <div className="absolute bottom-10 right-10 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-600 bg-black/60 p-1 pl-5">
-          <span className="text-sm truncate">Honey Drew</span>
-          <span className="flex h-full items-center justify-center rounded-sn bg-red-800 px-4 font-semibold">
-            £16.00
-          </span>
-        </div>
-      </Link>
+              <div className="absolute bottom-10 right-10 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-600 bg-black/60 p-1 pl-5">
+                <span className="text-sm truncate">{product.title}</span>
+                <span className="flex h-full items-center justify-center rounded-sn bg-red-800 px-4 font-semibold">
+                  {product.price.toLocaleString("en-GB", {
+                    style: "currency",
+                    currency: "GBP",
+                    minimumFractionDigits: 0,
+                    maximumFractionDigits: 0,
+                  })}
+                </span>
+              </div>
+            </Link>
+          </>
+        );
+      })}
     </div>
   );
 }
