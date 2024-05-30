@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "London Pride",
+      "slug": "london-pride",
+      "price": 14,
+      "image": "/london-pride.png",
+      "description": "Thi, tawny-coloured premium ale borrows sweet raisin, biscuit and dried-fruit notes from the Crystal malt, while fresh, piney herbs emanate from the hops.",
+      "featured": true,
+      "type": "ale"
+    },
+    {
+      "id": 2,
+      "title": "Black Cab",
+      "slug": "black-cab",
+      "price": 16,
+      "image": "/black-cab.png",
+      "description": "Black Cab pours a near jet-black colour with hints of coffee, chocolate and roasted malts on the nose.",
+      "featured": true,
+      "type": "stout"
+    },
+    {
+      "id": 3,
+      "title": "Griffin Gold",
+      "slug": "griffin-gold",
+      "price": 15,
+      "image": "/griffin-gold.png",
+      "description": "This refreshing golden ale is one that will tingle your taste buds and make you come back for more.",
+      "featured": true,
+      "type": "ale"
+    },
+    {
+      "id": 4,
+      "title": "Honey Brew",
+      "slug": "honey-drew",
+      "price": 16,
+      "image": "/honey-drew.png",
+      "description": "Brewed to 5% ABV, Organic Honey Dew imparts gentle honey sweetness both on the nose and the palate.",
+      "featured": false,
+      "type": "ale"
+    },
+    {
+      "id": 5,
+      "title": "Golden Pride",
+      "slug": "golden-pride",
+      "price": 16,
+      "image": "/golden-pride.png",
+      "description": "There's sweet orange oil, toasted grain and spicy fruit cake flavours on the tongue, and an intense, lasting finish.",
+      "featured": false,
+      "type": "ale"
+    },
+    {
+      "id": 6,
+      "title": "Beavertown Neck Oil",
+      "slug": "beavertown-neck-oil",
+      "price": 5,
+      "image": "/beavertown-neck-oil.png",
+      "description": "It is crammed full of hops that are added a different times during the brew to bring out their individual flavours while reducing the bitterness.",
+      "featured": false,
+      "type": "ipa"
+    },
+    {
+      "id": 7,
+      "title": "Beavertown Gamma Ray",
+      "slug": "beavertown-gamma-ray",
+      "price": 4,
+      "image": "/beavertown-gamma-ray.png",
+      "description": "Fruity, zesty and floral, every kind of hop aroma is there, dominated by the tropical fruit and citrus.",
+      "featured": false,
+      "type": "ipa"
+    },
+    {
+      "id": 8,
+      "title": "Bottle Conditioned Ale",
+      "slug": "bottle-conditioned-ale",
+      "price": 14,
+      "image": "/bottle-conditioned-ale.png",
+      "description": "Those fruity characteristics harmonise perfectly with the biscuity malts amid a clever and complex range of subtle flavours, the depth of which you could only find in a live beer fermented in the bottle.",
+      "featured": false,
+      "type": "ale"
+    },
+    {
+      "id": 9,
+      "title": "Bengal Lancer",
+      "slug": "bengal-lancer",
+      "price": 15,
+      "image": "/bengal-lancer.png",
+      "description": "On the palate, orange, character is followed by floral and spicy notes from the hops – riding through to a satisfying finish of mild bitterness.",
+      "featured": false,
+      "type": "ipa"
+    },
+    {
+      "id": 10,
+      "title": "London Porter",
+      "slug": "london-porter",
+      "price": 15,
+      "image": "/london-porter.png",
+      "description": "The blend of Brown, Crystal and Chocolate malts provide earthy character and creamy delivery, while hints of coffee and chocolate carry through onto the tongue.",
+      "featured": false,
+      "type": "porter"
+    }
+  ]
+}
