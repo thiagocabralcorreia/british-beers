@@ -42,13 +42,13 @@
     },
     {
       "id": 5,
-      "title": "Golden Pride",
-      "slug": "golden-pride",
+      "title": "Black Cab",
+      "slug": "black-cab",
       "price": 16,
-      "image": "/golden-pride.png",
-      "description": "There's sweet orange oil, toasted grain and spicy fruit cake flavours on the tongue, and an intense, lasting finish.",
+      "image": "/black-cab.png",
+      "description": "Black Cab pours a near jet-black colour with hints of coffee, chocolate and roasted malts on the nose.",
       "featured": false,
-      "type": "ale"
+      "type": "stout"
     },
     {
       "id": 6,
@@ -102,13 +102,13 @@
     },
     {
       "id": 11,
-      "title": "Black Cab",
-      "slug": "black-cab",
+      "title": "Golden Pride",
+      "slug": "golden-pride",
       "price": 16,
-      "image": "/black-cab.png",
-      "description": "Black Cab pours a near jet-black colour with hints of coffee, chocolate and roasted malts on the nose.",
+      "image": "/golden-pride.png",
+      "description": "There's sweet orange oil, toasted grain and spicy fruit cake flavours on the tongue, and an intense, lasting finish.",
       "featured": false,
-      "type": "stout"
+      "type": "ale"
     }
   ]
 }
