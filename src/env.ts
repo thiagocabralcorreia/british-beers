@@ -5,6 +5,8 @@ const envSchema = z.object({
 });
 
 // Validating the environment variables using the defined schema
+// safeParse when you want to handle validation in a more controlled manner,
+// providing error messages or fallback for the user without interrupting the application's flow.
 const parsedEnv = envSchema.safeParse(process.env);
 
 if (!parsedEnv.success) {

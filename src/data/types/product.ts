@@ -7,4 +7,7 @@ export interface Product {
   type: string;
   description: string;
   featured: boolean;
+  brewery: string;
+  abv: string;
+  size: string;
 }
