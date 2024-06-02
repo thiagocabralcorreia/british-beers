@@ -8,7 +8,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "British Beers",
+  title: {
+    template: "%s | British Beers",
+    default: "British Beers",
+  },
 };
 
 export default function RootLayout({
