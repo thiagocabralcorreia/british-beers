@@ -1,8 +1,8 @@
-import { Counter } from "@/components/counter";
-import { api } from "@/data/api";
-import { Product } from "@/data/types/product";
 import { Metadata } from "next";
 import Image from "next/image";
+import { AddToCartButton } from "@/components/add-to-cart-button";
+import { api } from "@/data/api";
+import { Product } from "@/data/types/product";
 
 interface ProductProps {
   params: {
@@ -97,13 +97,7 @@ export default async function ProductPage({ params }: ProductProps) {
             </span>
 
             <div className="flex gap-x-2 w-full justify-between">
-              <Counter />
-              <button
-                type="button"
-                className="mt-8 flex h-12 w-2/3 items-center justify-center rounded-md bg-red-800 font-bold text-white"
-              >
-                Add to Basket
-              </button>
+              <AddToCartButton productId={product.id} />
             </div>
           </div>
         </div>

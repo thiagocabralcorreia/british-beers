@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { CartProvider } from "@/context/cart-context";
+import { CartProvider } from "@/contexts/cart-context";
 import { Header } from "@/components/header";
 
 export default function StoreLayout({ children }: { children: ReactNode }) {
