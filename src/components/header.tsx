@@ -26,7 +26,11 @@ export function Header() {
         </Suspense>
       </div>
 
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-10">
+        <Link href="/products" className="flex items-center hover:underline">
+          <span className="text-sm">Beers</span>
+        </Link>
+
         <CartWidget />
 
         <Link href="/" className="flex items-center gap-2 hover:underline">

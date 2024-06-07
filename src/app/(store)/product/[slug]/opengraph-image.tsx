@@ -41,7 +41,7 @@ export default async function OgImage({
     (
       <div
         style={{
-          background: colors.zinc[950],
+          background: colors.zinc[100],
           width: "100%",
           height: "100%",
           display: "flex",
