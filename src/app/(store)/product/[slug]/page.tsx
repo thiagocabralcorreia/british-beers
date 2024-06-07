@@ -63,28 +63,28 @@ export default async function ProductPage({ params }: ProductProps) {
               {product.title}
             </h1>
 
-            <p className="mt-2 mb-4 leading-relaxed text-zinc-400">
+            <p className="mt-2 mb-4 leading-relaxed text-zinc-800">
               {product.description}
             </p>
 
             <div className="mt-2 flex gap-x-2">
               <span className="text-lg font-bold">Abv</span>
-              <span className="text-lg text-zinc-400">{product.abv}</span>
+              <span className="text-lg text-zinc-800">{product.abv}</span>
             </div>
 
             <div className="mt-2 flex gap-x-2">
               <span className="text-lg font-bold">Size</span>
-              <span className="text-lg text-zinc-400">{product.size}</span>
+              <span className="text-lg text-zinc-800">{product.size}</span>
             </div>
 
             <div className="mt-2 flex gap-x-2">
               <span className="text-lg font-bold">Brewery</span>
-              <span className="text-lg text-zinc-400">{product.brewery}</span>
+              <span className="text-lg text-zinc-800">{product.brewery}</span>
             </div>
 
             <div className="mt-2 flex gap-x-2">
               <span className="text-lg font-bold">Type</span>
-              <span className="text-lg text-zinc-400">{product.type}</span>
+              <span className="text-lg text-zinc-800">{product.type}</span>
             </div>
 
             <span className="mt-4 inline-block text-2xl py-2.5 font-bold text-amber-500">

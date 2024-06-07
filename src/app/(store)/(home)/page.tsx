@@ -7,7 +7,7 @@ import Link from "next/link";
 async function getFeaturedProducts(): Promise<Product[]> {
   const response = await api("/products/featured", {
     next: {
-      revalidate: 60 * 60, // 1 hour
+      revalidate: 1, // 1 hour
     },
   });
   const products = await response.json();
@@ -26,7 +26,7 @@ export default async function Home() {
     <div className="grid max-h-[860px] grid-cols-9 grid-rows-6 gap-6 px-8">
       <Link
         href={`/product/${highlightedProduct.slug}`}
-        className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end"
+        className="group relative col-span-6 row-span-6 rounded-lg bg-zinc-100 overflow-hidden flex justify-center items-end"
       >
         <Image
           src={highlightedProduct.image}
@@ -37,9 +37,9 @@ export default async function Home() {
           quality={100}
         />
 
-        <div className="absolute bottom-28 right-48 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-500 bg-black/60 p-1 pl-5">
+        <div className="absolute bottom-28 right-48 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-500 bg-white p-1 pl-5">
           <span className="text-sm truncate">{highlightedProduct.title}</span>
-          <span className="flex h-full items-center justify-center rounded-sm bg-red-800 px-4 font-semibold">
+          <span className="flex h-full items-center justify-center rounded-sm bg-red-800  text-white  px-4 font-semibold">
             {highlightedProduct.price.toLocaleString("en-GB", {
               style: "currency",
               currency: "GBP",
@@ -56,7 +56,7 @@ export default async function Home() {
             <Link
               key={product.id}
               href={`/product/${product.slug}`}
-              className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-900 overflow-hidden flex justify-center items-end"
+              className="group relative col-span-3 row-span-3 rounded-lg bg-zinc-100 overflow-hidden flex justify-center items-end"
             >
               <Image
                 src={product.image}
@@ -67,9 +67,9 @@ export default async function Home() {
                 alt=""
               />
 
-              <div className="absolute bottom-10 right-10 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-500 bg-black/60 p-1 pl-5">
+              <div className="absolute bottom-10 right-10 h-12 flex items-center gap-4 max-w-[280px] rounded-md border-2 border-amber-500 bg-white p-1 pl-5">
                 <span className="text-sm truncate">{product.title}</span>
-                <span className="flex h-full items-center justify-center rounded-sm bg-red-800 px-4 font-semibold">
+                <span className="flex h-full items-center justify-center rounded-sm bg-red-800  text-white  px-4 font-semibold">
                   {product.price.toLocaleString("en-GB", {
                     style: "currency",
                     currency: "GBP",
