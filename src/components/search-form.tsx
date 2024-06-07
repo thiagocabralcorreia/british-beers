@@ -16,7 +16,6 @@ export function SearchForm() {
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData);
 
-    console.log(data);
     const query = data.q;
 
     if (!query) {
