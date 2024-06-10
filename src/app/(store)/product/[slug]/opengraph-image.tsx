@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/server";
-import colors from "tailwindcss/colors";
 
 import { api } from "@/data/api";
 import { Product } from "@/data/types/product";
@@ -41,7 +40,7 @@ export default async function OgImage({
     (
       <div
         style={{
-          background: colors.zinc[100],
+          background: "#F4F4F5",
           width: "100%",
           height: "100%",
           display: "flex",
