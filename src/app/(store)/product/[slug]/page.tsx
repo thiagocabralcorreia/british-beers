@@ -18,14 +18,17 @@ async function getProduct(slug: string): Promise<Product> {
       },
     });
 
-    // Log the full response text for debugging
-    const text = await response.text();
-
+    // Check if the response is OK
     if (!response.ok) {
+      console.error(
+        `Failed to fetch product: ${response.status} ${response.statusText}`
+      );
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    // Parse JSON after logging the text
+    // Parse and log the response text
+    const text = await response.text();
+    console.log("Product Response text:", text);
     const product = JSON.parse(text);
     return product;
   } catch (error) {
@@ -54,14 +57,17 @@ export async function generateStaticParams() {
   try {
     const response = await api("/products/featured");
 
-    // Log the full response text for debugging
-    const text = await response.text();
-
+    // Check if the response is OK
     if (!response.ok) {
+      console.error(
+        `Failed to fetch static params: ${response.status} ${response.statusText}`
+      );
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    // Parse JSON after logging the text
+    // Parse and log the response text
+    const text = await response.text();
+    console.log("Static Params Response text:", text);
     const products = JSON.parse(text);
     return products.map((product: Product) => {
       return { slug: product.slug };
