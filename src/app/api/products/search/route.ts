@@ -18,3 +18,6 @@ export async function GET(request: NextRequest) {
 
   return Response.json(products);
 }
+
+// Exemplo de uso do APP_URL
+console.log(process.env.APP_URL);

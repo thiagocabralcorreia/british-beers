@@ -1,8 +1,9 @@
-import data from "./data.json";
-
 export async function GET() {
   try {
-    return new Response(JSON.stringify(data.products), {
+    const response = await fetch(`${process.env.APP_URL}/products`);
+    const products = await response.json();
+
+    return new Response(JSON.stringify(products), {
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
