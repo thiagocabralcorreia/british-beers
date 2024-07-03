@@ -12,7 +12,7 @@ interface ProductProps {
 
 async function getProduct(slug: string): Promise<Product> {
   try {
-    const response = await api(`${process.env.APP_URL}/products/${slug}`, {
+    const response = await api(`/products/${slug}`, {
       next: {
         revalidate: 60 * 60, // 1 hour
       },

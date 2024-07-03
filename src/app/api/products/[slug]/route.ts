@@ -7,7 +7,7 @@ export async function GET(
   try {
     // parse when you want immediate validation and
     // want the application to fail if the data is not valid.    const slug = z.string().parse(params.slug);
-    const response = await fetch(`${process.env.APP_URL}/products/${slug}`);
+    const response = await fetch(`${env.APP_URL}/products/${slug}`);
     const product = await response.json();
 
     if (!product) {

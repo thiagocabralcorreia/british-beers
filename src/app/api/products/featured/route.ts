@@ -1,6 +1,6 @@
 export async function GET() {
   try {
-    const response = await fetch(`${process.env.APP_URL}/products/featured`);
+    const response = await fetch(`${env.APP_URL}/products/featured`);
     const featuredProducts = await response.json();
 
     return new Response(JSON.stringify(featuredProducts), {

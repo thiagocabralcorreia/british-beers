@@ -1,6 +1,6 @@
 export async function GET() {
   try {
-    const response = await fetch(`${process.env.APP_URL}/products`);
+    const response = await fetch(`${env.APP_URL}/products`);
     const products = await response.json();
 
     return new Response(JSON.stringify(products), {
